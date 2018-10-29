@@ -23,8 +23,8 @@ Pod::Spec.new do |spec|
 
    spec.author    = "Mahdy"
 
-   spec.platform     = "10.0"
-   s.swift_version = "4.0"
+   spec.platform     = :ios, "10.0"
+   spec.swift_version = '4.0'
 
   spec.source       = { :git => "https://github.com/Ahmedmahdy93/Circular.git", :tag => "#{spec.version}" }
 
@@ -37,11 +37,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Circular", "Classes/**/*.{h,m}"
+  spec.source_files  = "Circular", "Circular/*"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,7 +64,7 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
-
+  spec.frameworks = "UIKit", "Foundation"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
